@@ -15,17 +15,28 @@ app.use(cors());
 app.use(express.json());
 
 // Firebase Admin initialization
-const serviceAccount = require("./firebaseServiceAccountKey.json");
+const path = require("path");
+
+const serviceAccountPath =
+  process.env.FIREBASE_SERVICE_ACCOUNT_PATH ||
+  path.join(__dirname, "firebaseServiceAccountKey.json");
+
+const serviceAccount = require(serviceAccountPath);
 
 initializeApp({
   credential: cert(serviceAccount),
 });
 
 // MongoDB connection
+
 mongoose
-  .connect("mongodb://localhost:27017/blogDB")
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected successfully"))
-  .catch((err) => console.error("MongoDB connection failed:", err.message));
+  .catch((err) => {
+    console.error("MongoDB connection failed:", err.message);
+    process.exit(1);
+  });
+
 
 // Blog schema
 const blogSchema = new mongoose.Schema({
