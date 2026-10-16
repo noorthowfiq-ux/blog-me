@@ -1,11 +1,10 @@
-
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import "./AdminDashboard.css";
 
-const API_URL = "http://localhost:5000/api/blogs";
+const API_URL = "https://noor-blog-backend.onrender.com/api/blogs";
 const ADMIN_UID = process.env.REACT_APP_ADMIN_UID;
 
 function formatDate(value) {
