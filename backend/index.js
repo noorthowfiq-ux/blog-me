@@ -19,7 +19,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
   "https://depfront.vercel.app",
-  "https://blog-1v0ym67oo-noorthowfiq-ux1.vercel.app",
+  "https://blog-me-pink.vercel.app/admin",
 ];
 
 app.use(
