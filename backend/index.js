@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 const express = require("express");
@@ -20,7 +19,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
   "https://depfront.vercel.app",
-  "https://blog-8p23hg6vk-noorthowfiq-ux1.vercel.app",
+  "https://blog-oikplje6y-noorthowfiq-ux1.vercel.app",
 ];
 
 app.use(
