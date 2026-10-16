@@ -1,10 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import Footer from "./common/Footer";
 
-const API_URL = "http://localhost:5000/api/blogs";
+const API_URL = "https://noor-blog-backend.onrender.com/api/blogs";
 
 export default function BlogDetails() {
   const { id } = useParams();
