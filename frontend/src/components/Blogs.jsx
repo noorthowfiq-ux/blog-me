@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "./common/Footer";
 
-const API_URL = "http://localhost:5000/api/blogs";
+const API_URL = "https://noor-blog-backend.onrender.com/api/blogs";
 
 function getExcerpt(content, limit = 200) {
   const text = (content || "").replace(/\s+/g, " ").trim();
