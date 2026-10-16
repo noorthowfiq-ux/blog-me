@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 
-const API_URL = "http://localhost:5000/api/blogs";
+const API_URL = "https://noor-blog-backend.onrender.com/api/blogs";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
